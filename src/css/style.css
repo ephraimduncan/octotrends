@@ -1,0 +1,29 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-boxs;
+}
+
+.container {
+	max-width: 70%;
+	margin: auto;
+}
+
+nav {
+	padding: 1rem;
+	background: rgb(44, 46, 77);
+}
+
+nav h1 {
+	color: white;
+	font-family: Mulish, sans-serif;
+}
+
+.nav {
+	display: flex;
+	align-items: center;
+}
+
+.fa-github {
+	color: 'white';
+}
