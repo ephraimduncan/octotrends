@@ -19,8 +19,6 @@ const App = () => {
 			});
 	}, []);
 
-	console.log(trending);
-
 	return (
 		<div>
 			<Navbar />
