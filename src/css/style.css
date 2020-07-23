@@ -79,6 +79,12 @@ nav h1 {
 	align-items: center;
 	font-family: Mulish, sans-serif;
 }
+
+.loading {
+	text-align: center;
+	margin: 15rem;
+}
+
 .footer a {
 	color: white;
 	font-weight: bold;

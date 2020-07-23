@@ -8,11 +8,15 @@ import './css/style.css';
 
 const App = () => {
 	const [trending, getTrending] = useState([]);
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		fetch('https://ghapi.huchen.dev/')
 			.then((response) => response.json())
-			.then((data) => getTrending(data));
+			.then((data) => {
+				getTrending(data);
+				setLoading(false);
+			});
 	}, []);
 
 	console.log(trending);
@@ -21,45 +25,66 @@ const App = () => {
 		<div>
 			<Navbar />
 			<Fragment>
-				{trending.map(
-					(
-						{
-							author,
-							name,
-							stars,
-							forks,
-							description,
-							url,
-							language,
-							languageColor,
+				{loading ? (
+					<div className="loading">
+						<img
+							src="https://enterprise.github.com/assets/spinners/octocat-spinner-128-26a44333917854c6794d55eac947b1277fced54f1f60c5df5d93431db8753bc5.gif"
+							width="100"
+						/>
+					</div>
+				) : (
+					trending.map(
+						(
+							{
+								author,
+								name,
+								stars,
+								forks,
+								description,
+								url,
+								language,
+								languageColor,
+							},
+							index,
+						) => {
+							return (
+								<Repo
+									key={
+										index *
+										435
+									}
+									owner={
+										author
+									}
+									name={
+										name
+									}
+									index={
+										index +
+										1
+									}
+									link={
+										url
+									}
+									description={
+										description
+									}
+									fork={
+										forks
+									}
+									star={
+										stars
+									}
+									lang={
+										language
+									}
+									langColor={
+										languageColor
+									}
+								/>
+							);
 						},
-						index,
-					) => {
-						return (
-							<Repo
-								key={
-									index *
-									435
-								}
-								owner={author}
-								name={name}
-								index={
-									index +
-									1
-								}
-								link={url}
-								description={
-									description
-								}
-								fork={forks}
-								star={stars}
-								lang={language}
-								langColor={
-									languageColor
-								}
-							/>
-						);
-					},
+					)
 				)}
 			</Fragment>
 			<Footer />
