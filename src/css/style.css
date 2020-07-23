@@ -9,9 +9,11 @@
 	margin: auto;
 }
 
-nav {
+nav,
+footer {
 	padding: 1rem;
 	background: rgb(44, 46, 77);
+	color: white;
 }
 
 nav h1 {
@@ -24,7 +26,7 @@ nav h1 {
 	background: #363b83;
 	border: 1px solid #363b83;
 	border-radius: 5px;
-	width: 40%;
+	width: 50%;
 	color: rgb(231, 223, 223);
 	margin: 20px auto;
 	font-family: Mulish, sans-serif;
@@ -37,12 +39,15 @@ nav h1 {
 
 .lang {
 	display: flex;
+	justify-content: center;
+	align-self: center;
 }
 
 .langColor {
 	width: 15px;
 	height: 15px;
 	border-radius: 50%;
+	margin-right: 5px;
 }
 
 .data div {
@@ -51,16 +56,34 @@ nav h1 {
 
 .data {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .num {
 	margin: 0 2px;
 }
 
-.description {
-	margin: 10px 0;
+.fa-github {
+	color: white;
 }
 
+.description {
+	margin: 10px 0;
+	font-family: Quicksand, sans-serif;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-family: Mulish, sans-serif;
+}
+.footer a {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
 @media (max-width: 890px) {
 	.repo {
 		width: 70%;

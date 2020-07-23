@@ -1,15 +1,10 @@
 import React from 'react';
-import 'font-awesome/css/font-awesome.css';
-import '../css/style.css';
 
 const Navbar = () => {
 	return (
 		<nav>
 			<div className="container nav">
-				<i
-					className="fa fa-github fa-3x"
-					style={{ color: 'white' }}
-				></i>
+				<i className="fa fa-github fa-3x"></i>
 				<h1 style={{ marginLeft: 20 }}>
 					Github Trending Now.
 				</h1>
