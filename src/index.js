@@ -2,10 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Navbar from './components/Navbar';
+import Repo from './components/Repo';
 import './css/style.css';
 
 const App = () => {
-	return <Navbar />;
+	return (
+		<div>
+			<Navbar />
+			<Repo />
+		</div>
+	);
 };
 
 ReactDOM.render(
