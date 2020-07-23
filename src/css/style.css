@@ -60,3 +60,28 @@ nav h1 {
 .description {
 	margin: 10px 0;
 }
+
+@media (max-width: 890px) {
+	.repo {
+		width: 70%;
+	}
+}
+@media (max-width: 500px) {
+	.repo {
+		width: 80%;
+	}
+}
+@media (max-width: 400px) {
+	nav h1 {
+		font-size: 1.1rem;
+	}
+
+	.fa-github {
+		font-size: 2rem;
+	}
+	.repo {
+		width: 90%;
+		font-size: 0.8rem;
+		padding: 10px;
+	}
+}
