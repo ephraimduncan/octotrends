@@ -16,7 +16,7 @@ const Repo = ({
 			{index}{' '}
 			<h2>
 				<a
-					href={`https://github.com${link}`}
+					href={link}
 					style={{
 						color: 'white',
 						textDecoration: 'none',
