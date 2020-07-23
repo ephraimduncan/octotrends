@@ -10,11 +10,19 @@ const Repo = ({
 	langColor,
 	fork,
 	star,
+	built,
 }) => {
 	return (
 		<div className="repo">
-			{index}{' '}
 			<h2>
+				<span
+					style={{
+						fontWeight: 500,
+						fontSize: 20,
+					}}
+				>
+					{`${index}.  `}
+				</span>
 				<a
 					href={link}
 					style={{
@@ -23,7 +31,11 @@ const Repo = ({
 					}}
 				>
 					{owner}
-					<span style={{ fontWeight: 500 }}>
+					<span
+						style={{
+							fontWeight: 500,
+						}}
+					>
 						{` / ${name}`}
 					</span>
 				</a>
@@ -53,6 +65,15 @@ const Repo = ({
 						</span>
 					</div>
 				</div>
+			</div>
+			<div className="authorImages">
+				{built.map(({ href, avatar }) => {
+					return (
+						<a href={href}>
+							<img src={avatar} />
+						</a>
+					);
+				})}
 			</div>
 		</div>
 	);

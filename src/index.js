@@ -42,6 +42,7 @@ const App = () => {
 								url,
 								language,
 								languageColor,
+								builtBy,
 							},
 							index,
 						) => {
@@ -78,6 +79,9 @@ const App = () => {
 									}
 									langColor={
 										languageColor
+									}
+									built={
+										builtBy
 									}
 								/>
 							);

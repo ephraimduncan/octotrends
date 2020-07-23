@@ -50,16 +50,16 @@ nav h1 {
 	margin-right: 5px;
 }
 
-.data div {
-	margin: 0 5px;
-}
-
 .data {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
-
+.star,
+.fork span,
+.star span {
+	margin: 0 5px;
+}
 .num {
 	margin: 0 2px;
 }
@@ -83,6 +83,16 @@ nav h1 {
 .loading {
 	text-align: center;
 	margin: 15rem;
+}
+.authorImages {
+	text-align: right;
+}
+
+.authorImages img {
+	margin-top: 10px;
+	width: 4%;
+	border-radius: 50%;
+	margin-left: 3px;
 }
 
 .footer a {
